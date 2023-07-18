@@ -32,7 +32,7 @@ async function scrape(language: string, filename: string): Promise<void> {
     const description = $(element).find('p.col-9').text();
     const url = 'https://github.com' + $(element).find('.lh-condensed a').attr('href');
 
-    fs.appendFileSync(filename, `* [${title}](${url}): ${description}\n`.replace(/\n/g, '').replace(/ /g, '')+"\n");
+    fs.appendFileSync(filename, "* "+`[${title}](${url}): ${description}\n`.replace(/\n/g, '').replace(/ /g, '')+"\n");
   });
 }
 
