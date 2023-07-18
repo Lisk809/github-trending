@@ -1,0 +1,13 @@
+{
+  "name": "github-trending",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/bonfy/github-trending",
+  "author": "Lisk809 <Liutsian_Lisk@126.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@types/axios": "^0.14.0",
+    "axios": "^1.4.0",
+    "cheerio": "^1.0.0-rc.12"
+  }
+}
