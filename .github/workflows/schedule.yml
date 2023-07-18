@@ -16,22 +16,22 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 18
-    
-    - name: Install dependencies
-      run: |
-        npm install
-        
-    - name: Run Scraper
-      run: |
-        npx tsx scraper.py
 
-    # Runs a set of commands using the runners shell
-    - name: push to origin master
-      run: |
-        echo start push
-        git config --global user.name "Lisk809"
-        git config --global user.email "Liutsian_Lisk@126.com"
-        
-        git add -A
-        git commit -m $(date '+%Y-%m-%d')
-        git push
+      - name: Install dependencies
+        run: |
+          npm install
+
+      - name: Run Scraper
+        run: |
+          npx tsx scraper.py
+
+      # Runs a set of commands using the runners shell
+      - name: push to origin master
+        run: |
+          echo start push
+          git config --global user.name "Lisk809"
+          git config --global user.email "Liutsian_Lisk@126.com"
+
+          git add -A
+          git commit -m $(date '+%Y-%m-%d')
+          git push
